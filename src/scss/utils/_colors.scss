@@ -1,0 +1,31 @@
+@each $key, $color in $theme-colors {
+
+  .color-#{$key} {
+    color: $color !important;
+  }
+
+  .bg-color-#{$key} {
+    background-color: $color !important;
+  }
+
+  .border-color-#{$key} {
+    border-color: $color !important;
+  }
+
+  .border-color-hover-#{$key} {
+    &:hover, &:active {
+      border-color: $color !important;
+    }
+  }
+}
+
+@each $key, $color in $social-colors {
+  .bg-color-#{$key} {
+    transition: background-color $transition-speed;
+    background-color: $color !important;
+    &:hover, &:active {
+      cursor: pointer;
+      background-color: darken($color, 8%) !important;
+    }
+  }
+}

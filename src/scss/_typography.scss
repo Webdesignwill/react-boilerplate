@@ -1,0 +1,5 @@
+@each $font-size in $element-font-sizes {
+  #{nth($font-size, 1)} {
+    font-size: #{nth($font-size, 2)};
+  }
+}
